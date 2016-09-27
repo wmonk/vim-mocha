@@ -26,7 +26,7 @@ function! s:GUIRunning()
   if has("gui_running") && has("gui_macvim")
     let g:spec_command = "silent !" . s:plugin_path . "/bin/run_in_os_x_terminal '" . s:cmd . "'"
   else
-    let g:spec_command = "!echo " . s:cmd . " && " . s:cmd
+    let g:spec_command = "!echo " . s:cmd . "; " . s:cmd
   endif
 endfunction
 
